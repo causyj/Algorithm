@@ -26,13 +26,19 @@ int main(){
             }
         }
         else if(c=="empty"){
-            cout << s.empty() << '\n';
+            cout << (int)s.empty() << '\n';
         }
         else if(c=="size"){
             cout << s.size() << '\n';
         }
         else if(c=="top"){
-            cout << s.top() << '\n';
+            if(s.empty()){
+                cout << -1 << '\n';
+            }
+            else{
+                cout << s.top() << '\n';
+            }
+            
         }
     }
     return 0;
